@@ -10,6 +10,6 @@ jobs:
     - teardown-step: |
         echo $(meta get meta.build_status)
         meta set meta.status.first '{"status":"SUCCESS","message":"Coverage is above 80%."}'
-  first:
+  boom:
     template: sd/noop@latest
     requires: [second]
