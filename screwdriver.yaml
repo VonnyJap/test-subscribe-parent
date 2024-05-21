@@ -11,5 +11,5 @@ jobs:
         echo $(meta get meta.build_status)
         meta set meta.status.first '{"status":"SUCCESS","message":"Coverage is above 80%."}'
   first:
+    requires: [~pr, ~commit]
     template: sd/noop@latest
-    requires: [second]
